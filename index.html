@@ -544,6 +544,21 @@ body {
 .flight-link {
   background: linear-gradient(135deg, #1565C0, #42A5F5);
 }
+.story-link {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 6px;
+  transition: transform 0.2s;
+}
+.story-link:active { transform: scale(0.96); }
 
 /* Responsive */
 @media (min-width: 600px) {
@@ -660,6 +675,7 @@ body {
         <div class="detail">바티칸 박물관, 시스티나 성당, 성 베드로 대성당 | 미켈란젤로의 천장화를 직접 볼 수 있는 기회! 시스티나 성당에서는 사진 촬영 금지</div>
         <span class="tag tag-sight">예약 완료</span>
         <div style="margin-top:6px"><a href="https://experiences.myrealtrip.com/products/3754187?utm_source=mktpartner&t_scope=&mylink_id=712400" target="_blank" class="tour-link accom-link">🎫 형제투어 예약</a></div>
+        <a href="#story-vatican" class="story-link" onclick="openStory('story-vatican')">📖 바티칸 이야기</a>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-italy"></div>
@@ -672,6 +688,7 @@ body {
         <div class="event"><span class="event-icon">🏛️</span> 로마 시내 관광</div>
         <div class="detail">트레비 분수 (동전 2개 던지면 사랑 성취💕) → 판테온 (2000년 된 콘크리트 돔, 무료입장) → 스페인 광장 (로마의 휴일 촬영지, 계단 앉기 금지!) → 나보나 광장 (베르니니 분수)</div>
         <span class="tag tag-sight">로마 필수 코스</span>
+        <a href="#story-roma" class="story-link" onclick="openStory('story-roma')">📖 로마 이야기</a>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-italy"></div>
@@ -720,6 +737,7 @@ body {
         <div class="event"><span class="event-icon">🏛️</span> 피렌체 시내 관광</div>
         <div class="detail">두오모 (463계단 돔 등반 가능, 피렌체 최고 전망!) → 시뇨리아 광장 (미켈란젤로 다비드상 복제본) → 베키오 다리 (히틀러도 파괴하지 못한 1345년 보석상 다리) → 레푸블리카 광장 (회전목마와 카페)</div>
         <span class="tag tag-sight">피렌체 필수 코스</span>
+        <a href="#story-firenze" class="story-link" onclick="openStory('story-firenze')">📖 피렌체 이야기</a>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-italy"></div>
@@ -760,6 +778,7 @@ body {
         <div class="event"><span class="event-icon">🚢</span> 크루즈 즐기기 (승선 및 시설 탐방)</div>
         <div class="detail">7박 지중해 크루즈 시작! 🎉 승선 시 크루즈 카드 발급 (객실 키+결제수단) | 수영장, 레스토랑, 극장 등 시설 탐방 | MSC for Me 앱 설치 추천</div>
         <span class="tag tag-cruise">크루즈 시작</span>
+        <a href="#story-cruise" class="story-link" onclick="openStory('story-cruise')">📖 지중해 크루즈 이야기</a>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
@@ -791,19 +810,59 @@ body {
         <div class="timeline-dot dot-cruise"></div>
         <div class="time">09:00~13:00</div>
         <div class="event"><span class="event-icon">🚢</span> 선내 자유시간</div>
-        <div class="detail">오후 입항 전 수영장, 갑판에서 여유롭게</div>
+        <div class="detail">오후 입항 전 수영장, 갑판에서 여유롭게 | 나폴리 접안 시 갑판에서 베수비오 화산 조망!</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="time">13:00~17:00</div>
-        <div class="event"><span class="event-icon">🏛️</span> 나폴리 기항지 투어</div>
-        <div class="detail">정박 1:00PM~8:00PM | 나폴리 피자 원조 도시! 마르게리타 피자 꼭 맛보기 | 폼페이 유적 반나절 투어 가능 (터미널에서 30분) | 스파카나폴리 거리 산책</div>
-        <span class="tag tag-sight">기항지 투어</span>
+        <div class="time">13:00</div>
+        <div class="event"><span class="event-icon">🚢</span> 나폴리 입항 - 하선</div>
+        <div class="detail">정박지: 스타치오네 마리티마(Stazione Marittima), 몰로 베베렐로(Molo Beverello) | 카스텔 누오보(누오보 성) 바로 옆 | 도심까지 도보 10분</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="event"><span class="tag" style="background:#FFF3E0;color:#E65100">⚠️ 20:00 승선 마감</span></div>
-        <div class="detail">반드시 20:00까지 승선 완료!</div>
+        <div class="time">13:15~13:45</div>
+        <div class="event"><span class="event-icon">🍕</span> 나폴리 피자 점심</div>
+        <div class="detail"><strong>L'Antica Pizzeria da Michele</strong> (터미널에서 도보 15분) - 1870년 개업, 마르게리타 &amp; 마리나라 단 2종류만 판매. 영화 '먹고 기도하고 사랑하라' 촬영지 | 대안: <strong>Gino Sorbillo</strong> (Via dei Tribunali) - 나폴리 최고 피자 장인. 두 곳 다 줄이 길 수 있으니 빠르게 선택!</div>
+        <span class="tag tag-food">필수 맛집</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">13:45~14:15</div>
+        <div class="event"><span class="event-icon">🏰</span> 카스텔 누오보 (Castel Nuovo)</div>
+        <div class="detail">터미널에서 도보 5분! 13세기 중세 성곽, 개선문이 인상적. 외부에서 사진만 찍어도 충분 (내부 입장 시 &euro;6, 30분 소요)</div>
+        <span class="tag tag-sight">도보 5분</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">14:15~14:45</div>
+        <div class="event"><span class="event-icon">⛲</span> 피아차 델 플레비시토 (Piazza del Plebiscito)</div>
+        <div class="detail">나폴리에서 가장 아름다운 광장. 왕궁(Palazzo Reale)과 산 프란체스코 디 파올라 성당의 반원형 주랑이 장관 | 터미널에서 도보 12분</div>
+        <span class="tag tag-sight">핵심 명소</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">14:45~16:00</div>
+        <div class="event"><span class="event-icon">🚶</span> 스파카나폴리 거리 산책</div>
+        <div class="detail">비아 톨레도(Via Toledo) 쇼핑가 → 스페인 지구(Quartieri Spagnoli) 좁은 골목길 → 스파카나폴리(Spaccanapoli). 나폴리 구시가지의 생생한 분위기! | 쿠오포(Cuoppo, 튀긴 해산물 콘) 길거리 간식 &euro;4~5</div>
+        <span class="tag tag-sight">도보 산책</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">16:00~16:30</div>
+        <div class="event"><span class="event-icon">☕</span> 나폴리 에스프레소 한 잔</div>
+        <div class="detail">나폴리는 이탈리아 에스프레소 문화의 성지! 길가 바(Bar)에서 서서 마시는 에스프레소 &euro;1~1.50</div>
+        <a href="#story-cruise" class="story-link" onclick="openStory('story-cruise')">📖 나폴리 이야기</a>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">17:00~19:00</div>
+        <div class="event"><span class="event-icon">🚢</span> 귀환 및 여유시간</div>
+        <div class="detail">터미널까지 도보 10~15분. 여유있게 귀환. 선내에서 출항 시 나폴리 야경 감상</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="event"><span class="tag" style="background:#FFF3E0;color:#E65100">⚠️ 20:00 승선 마감 (19:00까지 귀환 권장)</span></div>
+        <div class="detail">반드시 20:00까지 승선 완료! 여유있게 19:00 목표</div>
       </div>
     </div>
   </div></div>
@@ -823,20 +882,71 @@ body {
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="time">08:00~09:30</div>
-        <div class="event"><span class="event-icon">🍽️</span> 조식 (뷔페)</div>
+        <div class="time">07:30~08:30</div>
+        <div class="event"><span class="event-icon">🍽️</span> 조식 (뷔페) - 일찍 먹고 하선 준비!</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="time">10:00~16:00</div>
-        <div class="event"><span class="event-icon">🏛️</span> 메시나 기항지 투어</div>
-        <div class="detail">정박 9:00AM~6:00PM | 시칠리아의 관문! 타오르미나(버스 1시간)에서 그리스 극장+에트나 화산 조망 추천 | 아란치니(주먹밥), 카놀리(디저트) 꼭 맛보기</div>
-        <span class="tag tag-sight">기항지 투어</span>
+        <div class="time">09:00</div>
+        <div class="event"><span class="event-icon">🚢</span> 메시나 입항 - 하선</div>
+        <div class="detail">정박지: 메시나 크루즈 터미널 (도심 한가운데!) | 두오모 광장까지 도보 5~10분 | Via Vittorio Emanuele II 따라 직진하면 바로 도착</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="event"><span class="tag" style="background:#FFF3E0;color:#E65100">⚠️ 18:00 승선 마감</span></div>
-        <div class="detail">반드시 18:00까지 승선 완료!</div>
+        <div class="time">09:15~10:15</div>
+        <div class="event"><span class="event-icon">⛪</span> 메시나 대성당 (Duomo di Messina) &amp; 천문시계</div>
+        <div class="detail">세계 최대 천문시계가 있는 종탑! <strong>정오(12시)에 기계장치 작동 쇼</strong> - 황금 사자가 울부짖고 인형들이 움직이는 장관. 오전에 먼저 외관 감상 후, 정오에 다시 와서 시계 쇼 관람 추천 | 무료</div>
+        <span class="tag tag-sight">핵심 명소</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">10:15~10:45</div>
+        <div class="event"><span class="event-icon">⛪</span> 카탈라니 성모 교회 (Annunziata dei Catalani)</div>
+        <div class="detail">대성당에서 도보 2분. 12~13세기 십자군 시대 교회. 노르만-아랍-비잔틴 양식이 혼합된 독특한 건축물 | 무료</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">10:45~11:15</div>
+        <div class="event"><span class="event-icon">🍧</span> 그라니타 + 브리오쉬 아침간식</div>
+        <div class="detail">시칠리아 전통 아침! 커피 그라니타에 생크림 올린 것(Granita di caff&egrave; con panna) + 브리오쉬 콜 투포(brioche col tuppo)를 찢어서 그라니타에 찍어 먹기. 카이롤리 광장의 <strong>Pasticceria Irrera 1910</strong> 추천 (100년 넘은 명가)</div>
+        <span class="tag tag-food">필수 맛집</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">11:15~11:45</div>
+        <div class="event"><span class="event-icon">⛲</span> 넵튠 분수 (Fontana del Nettuno) &amp; 해안 산책</div>
+        <div class="detail">메시나의 해양 역사를 기념하는 분수. 메시나 해협과 이탈리아 본토가 보이는 해안가 산책</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">11:50~12:10</div>
+        <div class="event"><span class="event-icon">🔔</span> 두오모 천문시계 정오 쇼 관람!</div>
+        <div class="detail"><strong>놓치지 말 것!</strong> 11:50까지 두오모 광장 도착. 정오에 시작되는 천문시계 기계장치 작동 - 약 15분간 진행. 일찍 가서 좋은 자리 확보</div>
+        <span class="tag tag-sight">하이라이트</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">12:15~13:15</div>
+        <div class="event"><span class="event-icon">🍽️</span> 시칠리아 점심 - 아란치니 &amp; 카놀리</div>
+        <div class="detail"><strong>아란치노 메시네세</strong>: 메시나식 아란치니는 뾰족한 원뿔 모양 (에트나 화산 모양!). 라구(고기+완두콩) 속 채움. 길거리에서 &euro;2~3 | <strong>카놀리</strong>: 바삭한 튀김 반죽에 리코타 크림, 피스타치오, 초콜릿 토핑. Irrera 1910에서 주문 즉시 채워주는 신선한 카놀리 추천 | 두오모 근처 관광 식당(&euro;25 투어리스트 메뉴) 피하고 골목 안쪽 로컬 식당에서 &euro;12 정도</div>
+        <span class="tag tag-food">필수 맛집</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">13:30~16:30</div>
+        <div class="event"><span class="event-icon">🚶</span> 자유시간 - 메시나 추가 산책 또는 쇼핑</div>
+        <div class="detail">비아 가리발디(Via Garibaldi) 산책 &amp; 카페 | 메시나 지역 시장 구경 | 여유있게 해안가에서 메시나 해협 감상 | (선택) 시칠리아 레몬첼로, 피스타치오 제품 기념품 쇼핑</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">16:30~17:00</div>
+        <div class="event"><span class="event-icon">🚢</span> 귀환</div>
+        <div class="detail">터미널까지 도보 5~10분. 여유있게 귀환</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="event"><span class="tag" style="background:#FFF3E0;color:#E65100">⚠️ 18:00 승선 마감 (17:00까지 귀환 권장)</span></div>
+        <div class="detail">반드시 18:00까지 승선 완료! 여유있게 17:00 목표</div>
       </div>
     </div>
   </div></div>
@@ -856,20 +966,87 @@ body {
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="time">08:00~09:30</div>
-        <div class="event"><span class="event-icon">🍽️</span> 조식 (뷔페)</div>
+        <div class="time">07:00~08:00</div>
+        <div class="event"><span class="event-icon">🍽️</span> 조식 (뷔페) - 일찍 먹고 하선 준비!</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="time">10:00~16:00</div>
-        <div class="event"><span class="event-icon">🏛️</span> 몰타 기항지 투어</div>
-        <div class="detail">정박 8:00AM~5:00PM | 기사단의 도시 발레타 (도시 전체가 유네스코!) | 어퍼 바라카 가든에서 정오 대포 발사 구경 | 세인트 존스 대성당 (카라바조 작품) | 파스티치 간식 €0.50</div>
-        <span class="tag tag-sight">기항지 투어</span>
+        <div class="time">08:00</div>
+        <div class="event"><span class="event-icon">🚢</span> 발레타 입항 - 하선</div>
+        <div class="detail">정박지: 발레타 워터프론트(Valletta Waterfront), 그랜드 하버(Grand Harbour) | 입항 시 갑판에서 발레타 성벽 전경 꼭 감상! 세계에서 가장 아름다운 항구 입항 장면 중 하나</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="event"><span class="tag" style="background:#FFF3E0;color:#E65100">⚠️ 17:00 승선 마감</span></div>
-        <div class="detail">반드시 17:00까지 승선 완료!</div>
+        <div class="time">08:15~08:25</div>
+        <div class="event"><span class="event-icon">🛗</span> 바라카 리프트로 도시 진입</div>
+        <div class="detail">터미널에서 해안도로(Xatt Lascaris)를 따라 도보 2분 → 아치형 입구 'Barrakka Lift' 표지판 → 엘리베이터로 58m 상승! | 왕복 &euro;1 | 도보로 올라가면 가파른 오르막 15분</div>
+        <span class="tag tag-sight">필수 이용</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">08:30~09:15</div>
+        <div class="event"><span class="event-icon">🌿</span> 어퍼 바라카 가든 (Upper Barrakka Gardens)</div>
+        <div class="detail">리프트 도착 즉시! 1661년 성 베드로&바오로 보루 위에 만든 정원. 그랜드 하버 최고 전망대 - 우리 크루즈선이 정박한 모습도 보임! | 아침 일찍이라 사람 적어서 사진 찍기 좋음 | 무료</div>
+        <span class="tag tag-sight">핵심 명소</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">09:15~10:15</div>
+        <div class="event"><span class="event-icon">⛪</span> 성 요한 대성당 (St. John's Co-Cathedral)</div>
+        <div class="detail">바라카 가든에서 도보 5분. 유럽 최고의 바로크 건축! 밖은 소박하지만 안은 금박으로 화려. <strong>카라바조의 '세례 요한의 참수'</strong> - 카라바조가 유일하게 서명한 최대 작품 소장 | 입장료 &euro;15 | 약 45분~1시간 소요 | 어깨와 무릎 가리는 복장 필수</div>
+        <span class="tag tag-sight">핵심 명소</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">10:15~10:45</div>
+        <div class="event"><span class="event-icon">🥟</span> 파스티치 간식타임!</div>
+        <div class="detail"><strong>Manuela Malta Pastizzi</strong> (Merchants Street, 대성당 근처) - 매일 아침 갓 구운 파스티치! 리코타 치즈 또는 커리 완두콩 속 채움의 바삭한 페이스트리. &euro;0.50~1개 | 대안: Is-Suq tal-Belt (발레타 푸드마켓, Merchant Street) 안의 파스티치 가판대</div>
+        <span class="tag tag-food">필수 맛집</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">10:45~11:30</div>
+        <div class="event"><span class="event-icon">🚶</span> 발레타 구시가지 거리 산책</div>
+        <div class="detail">리퍼블릭 거리(Republic Street) 메인 보행가로 산책 → 기사단장 궁전(Grandmaster's Palace) 외관 → 국회의사당(House of Parliament, 렌조 피아노 설계) 현대건축 | 컬러풀한 발코니가 있는 좁은 골목길 포토존</div>
+        <span class="tag tag-sight">도보 산책</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">11:30~12:15</div>
+        <div class="event"><span class="event-icon">🍽️</span> 발레타 푸드마켓 점심 (Is-Suq tal-Belt)</div>
+        <div class="detail">19세기 건물을 복원한 실내 푸드코트. 현지 해산물, 몰타 전통 요리, 와인 등 다양한 가판대. 스투파트 탈-페넥(토끼 스튜, 몰타 국민 요리)도 맛볼 수 있음 | 합리적 가격</div>
+        <span class="tag tag-food">추천 맛집</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">12:15~12:30</div>
+        <div class="event"><span class="event-icon">💥</span> 정오 대포 발사 (Saluting Battery)</div>
+        <div class="detail"><strong>매일 정오 &amp; 16:00에 대포 발사!</strong> 어퍼 바라카 가든 바로 아래. 시간 맞추면 꼭 구경 | 점심 먹으면서 소리만 들어도 OK</div>
+        <span class="tag tag-sight">이벤트</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">12:30~14:00</div>
+        <div class="event"><span class="event-icon">🏰</span> 발레타 성벽 &amp; 로워 바라카 가든</div>
+        <div class="detail">발레타 성벽 따라 걷기 - 도시 전체가 거대한 요새! 로워 바라카 가든까지 산책. 포트 세인트 엘모(Fort St. Elmo) 방향 해안 경치 감상 | 발레타 끝까지 갔다 돌아오기</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">14:00~15:00</div>
+        <div class="event"><span class="event-icon">🛍️</span> 자유시간 &amp; 쇼핑</div>
+        <div class="detail">몰타 유리공예, 몰타 레이스, 몰타 꿀 등 기념품 | 카페에서 몰타 커피와 임카레트(대추야자 튀김 페이스트리) 디저트</div>
+        <a href="#story-cruise" class="story-link" onclick="openStory('story-cruise')">📖 몰타 이야기</a>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">15:00~15:30</div>
+        <div class="event"><span class="event-icon">🛗</span> 바라카 리프트로 하산 → 귀환</div>
+        <div class="detail">리프트 또는 계단으로 워터프론트 하산. 터미널까지 도보 5분</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="event"><span class="tag" style="background:#FFF3E0;color:#E65100">⚠️ 17:00 승선 마감 (16:00까지 귀환 권장)</span></div>
+        <div class="detail">반드시 17:00까지 승선 완료! 여유있게 16:00 목표</div>
       </div>
     </div>
   </div></div>
@@ -933,15 +1110,78 @@ body {
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="time">10:00~16:00</div>
-        <div class="event"><span class="event-icon">🏛️</span> 마르세유 기항지 투어</div>
-        <div class="detail">정박 7:00AM~6:00PM | 구항구(Vieux-Port) 도보 이동 가능 | 노트르담 드 라 가르드 대성당 (마르세유 최고 전망, 택시 추천) | 부이야베스(해산물 스튜) 맛보기 | 마르세유 비누 기념품</div>
-        <span class="tag tag-sight">기항지 투어</span>
+        <div class="time">07:00~08:00</div>
+        <div class="event"><span class="event-icon">🍽️</span> 조식 (뷔페) - 일찍 먹고 하선 준비!</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="event"><span class="tag" style="background:#FFF3E0;color:#E65100">⚠️ 18:00 승선 마감</span></div>
-        <div class="detail">반드시 18:00까지 승선 완료!</div>
+        <div class="time">08:00</div>
+        <div class="event"><span class="event-icon">🚢</span> 마르세유 하선</div>
+        <div class="detail">정박지: 마르세유 프로방스 크루즈 터미널(MPCT), Porte 4, M&ocirc;le L&eacute;on Gourret | 바닥의 초록색 라인 따라 출구까지 도보 5~12분 | 항구 출구에서 무료 셔틀버스 → 졸리에트 광장(Place de la Joliette) 하차, 20분 간격 운행 (09:20~17:20)</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">08:30~09:00</div>
+        <div class="event"><span class="event-icon">🚌</span> 도심 이동</div>
+        <div class="detail"><strong>무료 셔틀</strong>: 크루즈 운항일에만 운행, 졸리에트까지 | <strong>35번 버스</strong>: 항구 출구 정류장 → 졸리에트 광장 | <strong>택시</strong>: 구항구(Vieux-Port)까지 &euro;20~25 | 졸리에트에서 구항구까지 도보 15분 또는 지하철 1정거장</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">09:00~09:30</div>
+        <div class="event"><span class="event-icon">🎨</span> 르 파니에 지구 (Le Panier)</div>
+        <div class="detail">졸리에트에서 도보 5분. 마르세유에서 가장 오래된 동네 (기원전 600년 그리스인 정착지). 좁은 골목길, 컬러풀한 건물, 스트리트 아트, 독립 갤러리와 부티크 | 사진 찍기 좋은 포토존 가득</div>
+        <span class="tag tag-sight">핵심 명소</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">09:30~10:00</div>
+        <div class="event"><span class="event-icon">☕</span> 카페에서 아침 커피</div>
+        <div class="detail">르 파니에 골목 카페에서 에스프레소 + 크루아상. 프랑스 카페 문화 체험! | 파니세(Panisse) - 병아리콩 튀김, 마르세유 길거리 간식. 바삭하고 고소한 맛 &euro;3~4</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">10:00~10:45</div>
+        <div class="event"><span class="event-icon">⛵</span> 구항구 (Vieux-Port) 산책</div>
+        <div class="detail">마르세유의 심장! 아침 어시장(March&eacute; aux Poissons) 구경 - 어부들이 갓 잡은 생선 직접 판매. 항구 주변 카페 테라스에서 파스티스(Pastis, 아니스 향 식전주) 한 잔 | 무료</div>
+        <span class="tag tag-sight">핵심 명소</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">10:45~12:00</div>
+        <div class="event"><span class="event-icon">⛪</span> 노트르담 드 라 가르드 대성당 (Notre-Dame de la Garde)</div>
+        <div class="detail">마르세유 최고 전망대! 도시 전체와 지중해가 360도 파노라마로 펼쳐짐. 구항구에서 <strong>60번 버스</strong>(&euro;2, 비접촉 카드 결제) 또는 <strong>쁘띠 트랭</strong>(관광열차, &euro;10) | 택시 &euro;7~9, 3분 | 도보는 가파른 오르막 45분이라 비추천 | 무료 입장</div>
+        <span class="tag tag-sight">핵심 명소</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">12:00~13:30</div>
+        <div class="event"><span class="event-icon">🍲</span> 부이야베스 점심!</div>
+        <div class="detail"><strong>Le Miramar</strong> (구항구 바로 앞) - 정통 부이야베스 전문점, 전통 레시피 고수 | <strong>Chez Fonfon</strong> (Vallon des Auffes 항구) - 1952년부터 4대째 부이야베스 명가, 그림 같은 소형 항구 풍경 | 가격: &euro;50~70/인 (부이야베스는 원래 고급 요리!) | <strong>팁: 구항구 바로 앞 관광식당은 비싸고 맛 평범. 2블록 안쪽으로 들어가면 가성비 좋은 로컬 식당</strong></div>
+        <span class="tag tag-food">필수 맛집</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">13:30~14:30</div>
+        <div class="event"><span class="event-icon">🏛️</span> MuCEM 박물관 외관 &amp; 포르 생장</div>
+        <div class="detail">유럽지중해문명박물관(MuCEM) - 건물 외관의 콘크리트 레이스 패턴이 독특! 옥상 테라스에서 바다 전망 무료 | 포르 생장(Fort Saint-Jean)과 연결된 다리 위 포토존 | 내부 관람 시 &euro;11, 1시간 추가 소요</div>
+        <span class="tag tag-sight">추천 명소</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">14:30~15:30</div>
+        <div class="event"><span class="event-icon">🛍️</span> 자유시간 &amp; 기념품 쇼핑</div>
+        <div class="detail"><strong>마르세유 비누(Savon de Marseille)</strong> 기념품 추천 - 졸리에트 근처 Les Terrasses du Port 쇼핑센터 또는 르 파니에 골목 비누 가게 | 라벤더 제품도 프로방스 특산</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">15:30~16:30</div>
+        <div class="event"><span class="event-icon">🚌</span> 귀환</div>
+        <div class="detail">셔틀버스(마지막 17:20) 또는 택시로 터미널 귀환. 여유있게 출발</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="event"><span class="tag" style="background:#FFF3E0;color:#E65100">⚠️ 18:00 승선 마감 (17:00까지 귀환 권장)</span></div>
+        <div class="detail">반드시 18:00까지 승선 완료! 여유있게 17:00 목표. 셔틀 마지막 17:20</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
@@ -1043,6 +1283,7 @@ body {
         <div class="event"><span class="event-icon">🏛️</span> 루체른 관광</div>
         <div class="detail">카펠교 (유럽 최고 오래된 목조 다리, 1333년! 천장 삼각형 그림 감상) → 빈사의 사자상 (마크 트웨인: "세상에서 가장 슬프고 감동적인 바위") → 루체른 호수 산책</div>
         <span class="tag tag-sight">루체른 명소</span>
+        <a href="#story-swiss" class="story-link" onclick="openStory('story-swiss')">📖 스위스 이야기</a>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-swiss"></div>
@@ -1077,6 +1318,7 @@ body {
         <div class="detail">루체른 호수 유람선(1h, 알프스 배경 로맨틱!) → 비츠나우 → 유럽 최초 산악열차(1871년) → 정상에서 알프스+13개 호수 파노라마 | 스위스 패스 소지 시 무료</div>
         <span class="tag tag-sight">스위스 하이라이트</span>
         <span class="tag" style="background:#FFF3E0;color:#E65100">⚠️ 일찍 출발 필수</span>
+        <a href="#story-swiss" class="story-link" onclick="openStory('story-swiss')">📖 리기산 이야기</a>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-swiss"></div>
@@ -1140,6 +1382,7 @@ body {
         <div class="event"><span class="event-icon">🏛️</span> 관광</div>
         <div class="detail">벨렝 지구: 제로니모스 수도원 (바스코 다 가마 항해 기념, 유네스코) → 벨렝탑 (대항해시대 선원들의 마지막 랜드마크) → 발견 기념비 | 에그타르트 원조 Pasteis de Belem 근처!</div>
         <span class="tag tag-sight">리스본 필수 코스</span>
+        <a href="#story-portugal" class="story-link" onclick="openStory('story-portugal')">📖 포르투갈 이야기</a>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-portugal"></div>
@@ -1196,6 +1439,7 @@ body {
         <div class="event"><span class="event-icon">🏛️</span> 포르토 관광</div>
         <div class="detail">히베이라 지구 (다채로운 건물+도우루 강변, 유네스코) → 동 루이스 1세 다리 (윗층 도보, 일몰 명소!) → 렐루 서점 (해리포터 영감의 원천, 입장료 €8, 오전 일찍 추천)</div>
         <span class="tag tag-sight">포르토 명소</span>
+        <a href="#story-portugal" class="story-link" onclick="openStory('story-portugal')">📖 포르토 이야기</a>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-portugal"></div>
@@ -1324,6 +1568,7 @@ body {
         <div class="event"><span class="event-icon">🏛️</span> 사그라다 파밀리아</div>
         <div class="detail">가우디 서거 100주년(2026.6) 직후! 140년 건축 중인 성당 | 오전 햇살에 스테인드글라스가 무지갯빛으로 빛남 | 탑 투어(나시멘트 추천)에서 바르셀로나 전경</div>
         <span class="tag tag-sight">사전 예약 필수</span>
+        <a href="#story-barcelona" class="story-link" onclick="openStory('story-barcelona')">📖 바르셀로나 이야기</a>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-spain"></div>
@@ -1403,7 +1648,7 @@ body {
 <div class="story-section">
 
 <!-- Roma -->
-<div class="story-card">
+<div class="story-card" id="story-roma">
   <div class="story-header" onclick="toggleStory(this)">
     <span class="story-emoji">🏛️</span>
     <span class="story-title">로마 — 모든 길은 로마로 통한다</span>
@@ -1429,7 +1674,7 @@ body {
 </div>
 
 <!-- Vatican -->
-<div class="story-card">
+<div class="story-card" id="story-vatican">
   <div class="story-header" onclick="toggleStory(this)">
     <span class="story-emoji">⛪</span>
     <span class="story-title">바티칸 — 세계에서 가장 작은 나라</span>
@@ -1449,7 +1694,7 @@ body {
 </div>
 
 <!-- Firenze -->
-<div class="story-card">
+<div class="story-card" id="story-firenze">
   <div class="story-header" onclick="toggleStory(this)">
     <span class="story-emoji">🎨</span>
     <span class="story-title">피렌체 — 르네상스가 꽃핀 도시</span>
@@ -1471,7 +1716,7 @@ body {
 </div>
 
 <!-- Mediterranean Cruise -->
-<div class="story-card">
+<div class="story-card" id="story-cruise">
   <div class="story-header" onclick="toggleStory(this)">
     <span class="story-emoji">🚢</span>
     <span class="story-title">지중해 — 문명의 바다를 항해하다</span>
@@ -1497,7 +1742,7 @@ body {
 </div>
 
 <!-- Switzerland -->
-<div class="story-card">
+<div class="story-card" id="story-swiss">
   <div class="story-header" onclick="toggleStory(this)">
     <span class="story-emoji">🏔️</span>
     <span class="story-title">스위스 — 알프스의 나라, 동화 속 풍경</span>
@@ -1521,7 +1766,7 @@ body {
 </div>
 
 <!-- Portugal -->
-<div class="story-card">
+<div class="story-card" id="story-portugal">
   <div class="story-header" onclick="toggleStory(this)">
     <span class="story-emoji">⚓</span>
     <span class="story-title">포르투갈 — 대항해시대를 연 탐험가의 나라</span>
@@ -1551,7 +1796,7 @@ body {
 </div>
 
 <!-- Barcelona -->
-<div class="story-card">
+<div class="story-card" id="story-barcelona">
   <div class="story-header" onclick="toggleStory(this)">
     <span class="story-emoji">🎭</span>
     <span class="story-title">바르셀로나 — 가우디의 미완성 걸작</span>
@@ -1787,39 +2032,53 @@ body {
       <li>해가 뜨고 지는 방향 확인해서 일몰/일출 감상</li>
     </ul>
 
-    <h4>🇮🇹 나폴리 기항지 팁</h4>
+    <h4>🇮🇹 나폴리 기항지 상세 가이드</h4>
     <ul>
-      <li>폼페이 유적 방문 가능 (터미널에서 약 30분). 반나절 투어</li>
-      <li>나폴리 피자는 무조건 먹어야! 마르게리타 원조 도시</li>
-      <li>스파카나폴리 거리: 나폴리 구시가지의 좁은 골목길</li>
-      <li>산타루치아 해변가 산책 추천</li>
-      <li><span class="highlight">나폴리는 소매치기 주의 특히 심함</span></li>
+      <li><strong>정박지:</strong> 스타치오네 마리티마(Stazione Marittima), 몰로 베베렐로. 도심까지 도보 10분</li>
+      <li><strong>교통:</strong> 도보로 충분! 가장 가까운 지하철역 Municipio 300m. 폼페이 가려면 Circumvesuviana 열차 30분</li>
+      <li><strong>통화/언어:</strong> 유로(EUR), 이탈리아어 (영어 제한적)</li>
+      <li><strong>필수 음식:</strong> 마르게리타 피자 (Da Michele 또는 Gino Sorbillo), 쿠오포(튀긴 해산물 콘 &euro;4~5), 에스프레소(&euro;1)</li>
+      <li><strong>핵심 명소:</strong> 카스텔 누오보(도보 5분), 피아차 델 플레비시토(도보 12분), 스파카나폴리 거리, 비아 톨레도 쇼핑가</li>
+      <li><span class="highlight">소매치기 주의 매우 심함!</span> 귀중품 최소화, 가방 앞으로. 택시 미터기 확인 필수</li>
+      <li><strong>피할 것:</strong> '선물'이라며 물건 건네는 사기꾼 (받으면 돈 요구), 관광지 앞 바가지 식당 (터미널 500m 이내), 미터 안 켜는 택시</li>
+      <li><strong>시간 관리:</strong> 정박 1PM~8PM으로 시간이 짧아 폼페이는 비추천 (왕복만 1시간+). 나폴리 도심 도보 투어에 집중!</li>
     </ul>
 
-    <h4>🇮🇹 메시나(시칠리아) 기항지 팁</h4>
+    <h4>🇮🇹 메시나(시칠리아) 기항지 상세 가이드</h4>
     <ul>
-      <li>타오르미나 방문 추천 (버스로 약 1시간). 그리스 극장에서 에트나 화산 조망</li>
-      <li>시칠리아 아란치니(주먹밥), 카놀리(디저트) 꼭 먹어보기</li>
-      <li>에트나 화산: 유럽 최대 활화산. 멀리서라도 볼 수 있음</li>
+      <li><strong>정박지:</strong> 메시나 크루즈 터미널 (도심 한가운데). 두오모 광장까지 도보 5~10분</li>
+      <li><strong>교통:</strong> 도보로 충분! Via Vittorio Emanuele II 직진하면 두오모</li>
+      <li><strong>통화/언어:</strong> 유로(EUR), 이탈리아어</li>
+      <li><strong>필수 음식:</strong> 아란치노 메시네세(뾰족한 원뿔형 주먹밥, &euro;2~3), 카놀리(Irrera 1910에서 주문 즉시 채워주는 신선한 것!), 그라니타 디 카페 콘 판나 + 브리오쉬</li>
+      <li><strong>핵심 명소:</strong> 두오모 &amp; 천문시계(정오 쇼 필수!), 카탈라니 교회, 넵튠 분수</li>
+      <li><strong>타오르미나:</strong> 기차 50분(&euro;5~7 편도) 또는 버스 1시간. 그리스 극장+에트나 화산 조망이 장관이지만, 왕복 2~3시간 소요되어 메시나 시내 시간 부족할 수 있음. 가면 사전 온라인 예매 필수(Aditus 포털)</li>
+      <li><strong>피할 것:</strong> 두오모 근처 &euro;25 투어리스트 메뉴 식당 (골목 안쪽 로컬 식당에서 &euro;12로 더 맛있게), 관광열차(도보로 충분한 거리)</li>
+      <li><strong>꿀팁:</strong> 정오 천문시계 쇼는 11:50까지 도착해서 자리 확보. 쇼가 끝나면 바로 점심 먹으러!</li>
     </ul>
 
-    <h4>🇲🇹 몰타 기항지 팁</h4>
+    <h4>🇲🇹 몰타 기항지 상세 가이드</h4>
     <ul>
-      <li><strong>발레타 구시가지:</strong> 유네스코 세계문화유산. 기사단의 도시</li>
-      <li><strong>어퍼 바라카 가든:</strong> 그랜드 하버 최고 전망대. 정오에 대포 발사 행사</li>
-      <li><strong>세인트 존스 대성당:</strong> 카라바조 작품 소장</li>
-      <li><strong>파스티치(Pastizzi):</strong> 몰타 전통 간식, 리코타 치즈/완두콩 페이스트리. &euro;0.50~1</li>
-      <li>공용어: 몰타어, 영어. 영어가 잘 통함!</li>
-      <li>통화: 유로 사용</li>
+      <li><strong>정박지:</strong> 발레타 워터프론트(Valletta Waterfront), 그랜드 하버. 입항 장면이 세계적으로 유명!</li>
+      <li><strong>교통:</strong> 바라카 리프트(왕복 &euro;1)로 성벽 위 도시 진입! 터미널에서 리프트까지 도보 2분. 도보로 올라가면 가파른 15분</li>
+      <li><strong>통화/언어:</strong> 유로(EUR), 몰타어+영어 (영어 완벽히 통함!)</li>
+      <li><strong>필수 음식:</strong> 파스티치(리코타/완두콩 페이스트리 &euro;0.50, Manuela Malta Pastizzi), 스투파트 탈-페넥(토끼 스튜, 몰타 국민 요리), 임카레트(대추야자 튀김)</li>
+      <li><strong>핵심 명소:</strong> 어퍼 바라카 가든(무료, 최고 전망), 성 요한 대성당(&euro;15, 카라바조 필수!), 기사단장 궁전, 발레타 성벽</li>
+      <li><strong>피할 것:</strong> 항구 바로 위 관광객용 기념품점 (리퍼블릭 거리 안쪽이 저렴), 홉온홉오프 버스 (발레타는 도보 30분이면 횡단 가능)</li>
+      <li><strong>복장 주의:</strong> 성 요한 대성당 입장 시 어깨와 무릎 가리는 복장 필수. 돌길이 많아 편한 운동화 필수!</li>
+      <li><strong>꿀팁:</strong> 일찍 하선(08:00)해서 아침에 바라카 가든 사진 찍기 (크루즈 단체 관광객 도착 전). 정오 또는 16:00 대포 발사 시간 맞추기</li>
     </ul>
 
-    <h4>🇫🇷 마르세유 기항지 팁</h4>
+    <h4>🇫🇷 마르세유 기항지 상세 가이드</h4>
     <ul>
-      <li><strong>구항구(Vieux-Port):</strong> 크루즈 터미널에서 도보 가능</li>
-      <li><strong>노트르담 드 라 가르드 대성당:</strong> 마르세유 최고 전망. 언덕 위라 택시/버스 추천</li>
-      <li><strong>부이야베스:</strong> 마르세유 대표 해산물 스튜. 구항구 레스토랑에서 맛보기</li>
-      <li><strong>르 파니에 지구:</strong> 마르세유에서 가장 오래된 동네. 예쁜 골목길과 스트리트 아트</li>
-      <li>마르세유 비누(Savon de Marseille) 기념품 추천</li>
+      <li><strong>정박지:</strong> 마르세유 프로방스 크루즈 터미널(MPCT), Porte 4. 바닥 초록 라인 따라 출구까지 5~12분 도보</li>
+      <li><strong>교통:</strong> 무료 셔틀(크루즈 운항일, 09:20~17:20, 20분 간격) → 졸리에트 광장 | 35번 버스 | 택시 구항구까지 &euro;20~25</li>
+      <li><strong>통화/언어:</strong> 유로(EUR), 프랑스어 (영어 제한적, 기본 프랑스어 인사 하면 좋음 - Bonjour!)</li>
+      <li><strong>필수 음식:</strong> 부이야베스(Le Miramar 또는 Chez Fonfon, &euro;50~70/인), 파니세(병아리콩 튀김 &euro;3~4), 파스티스(아니스 식전주)</li>
+      <li><strong>핵심 명소:</strong> 구항구(Vieux-Port) &amp; 아침 어시장, 노트르담 드 라 가르드(360도 전망!), 르 파니에 지구, MuCEM 박물관</li>
+      <li><strong>노트르담 이동법:</strong> 구항구에서 60번 버스(&euro;2) 14분 or 택시(&euro;7~9) 3분 or 관광열차(&euro;10). 도보는 오르막 45분이라 비추천</li>
+      <li><strong>피할 것:</strong> 구항구 바로 앞 관광 식당 (비싸고 맛 평범, 2블록 안쪽 로컬 식당이 가성비 좋음), 항구 근처 호객행위 식당</li>
+      <li><strong>기념품:</strong> 마르세유 비누(Savon de Marseille), 라벤더 제품 - Les Terrasses du Port 또는 르 파니에 골목 가게에서</li>
+      <li><strong>셔틀 주의:</strong> 마지막 셔틀 17:20! 여유있게 15:30~16:00에 귀환 시작 권장</li>
     </ul>
   </div></div>
 </div>
@@ -3072,6 +3331,21 @@ const cardObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.day-card, .tip-card, .story-card').forEach(card => {
   cardObserver.observe(card);
 });
+
+// Open story and scroll to it
+function openStory(id) {
+  event.preventDefault();
+  const card = document.getElementById(id);
+  if (!card) return;
+  const body = card.querySelector('.story-body');
+  if (!card.classList.contains('open')) {
+    card.classList.add('open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+  }
+  setTimeout(() => {
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 100);
+}
 </script>
 
 </body>
