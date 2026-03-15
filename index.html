@@ -595,7 +595,7 @@ body {
       <div class="timeline-item">
         <div class="timeline-dot dot-flight"></div>
         <div class="time">08:30</div>
-        <div class="event"><span class="event-icon">🧳</span> 인천공항 도착 (공항버스)</div>
+        <div class="event"><span class="event-icon">🚌</span> 공항버스 출발</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-flight"></div>
@@ -605,8 +605,7 @@ body {
       <div class="timeline-item">
         <div class="timeline-dot dot-flight"></div>
         <div class="time">13:20~19:35</div>
-        <div class="event"><span class="event-icon">✈️</span> 인천 → 로마 (아시아나항공)</div>
-        <div class="detail">비행시간 약 13시간 10분</div>
+        <div class="event"><span class="event-icon">✈️</span> 비행기 (아시아나, 13시간 10분)</div>
         <span class="tag tag-flight">장거리 비행</span>
       </div>
       <div class="timeline-item">
@@ -616,18 +615,16 @@ body {
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-italy"></div>
-        <div class="time">20:30~21:30</div>
-        <div class="event"><span class="event-icon">🚕</span> 숙소 이동</div>
+        <div class="time">20:30~22:00</div>
+        <div class="event"><span class="event-icon">🚕</span> 숙소 이동 및 체크인</div>
         <div class="detail">Airbnb - Via Fortebraccio 46, Rome</div>
         <span class="tag tag-hotel">숙소</span>
         <div style="margin-top:6px"><a href="https://www.airbnb.co.kr/trips/v1/reservation-details/ro/RESERVATION2_CHECKIN/HMCQRQ5ETB" target="_blank" class="accom-link">🏠 Airbnb 예약 확인</a> <a href="https://maps.app.goo.gl/o9n3usnxMt2edozg8" target="_blank" class="map-link accom-link">📍 공항 지도</a></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot dot-italy"></div>
-        <div class="time">21:30~23:00</div>
-        <div class="event"><span class="event-icon">🍽️</span> 핀사(Pinsa) 저녁식사</div>
-        <div class="detail">로마식 피자의 원조, 가볍고 바삭한 식감</div>
-        <span class="tag tag-food">로마 맛집</span>
+        <div class="time">22:00~</div>
+        <div class="event"><span class="event-icon">🛒</span> 편의점/마트에서 간단히 장보고 취침</div>
       </div>
     </div>
   </div></div>
@@ -671,12 +668,8 @@ body {
       <div class="timeline-item">
         <div class="timeline-dot dot-italy"></div>
         <div class="time">19:30~21:00</div>
-        <div class="event"><span class="event-icon">🍽️</span> 저녁식사</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot dot-italy"></div>
-        <div class="event"><span class="event-icon">🍽️</span> Pinseria Romana Pigneto</div>
-        <div class="detail">평점 4.7 | 숙소 근처, 정통 핀사 전문점</div>
+        <div class="event"><span class="event-icon">🍽️</span> 저녁식사 - Pinseria Romana Pigneto</div>
+        <div class="detail">숙소 근처, 평점 4.7 | 72시간 발효 반죽의 정통 핀사 전문점</div>
         <span class="tag tag-food">추천 맛집</span>
         <div style="margin-top:6px"><a href="https://maps.app.goo.gl/7yb9XxAKguGiKp446" target="_blank" class="map-link accom-link">📍 Pinseria 위치</a></div>
       </div>
@@ -2137,6 +2130,360 @@ body {
 </div>
 </div>
 
+<!-- Food Recommendations Section -->
+<div class="section-title" id="food">🍽️ 맛집 추천</div>
+
+<div class="tips-section">
+<div class="tip-card">
+  <div class="tip-header" onclick="toggleTip(this)">
+    <div class="tip-icon" style="background:var(--italy-light)">🇮🇹</div>
+    <span>로마 맛집 추천</span>
+    <svg class="tip-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="tip-body"><div class="tip-body-inner">
+    <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:12px">📍 숙소(Via Fortebraccio, Pigneto) 기준 추천</p>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Pinseria Romana Pigneto</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.7</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍕 핀사 (로마 전통) · €</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">숙소 바로 근처! 피자보다 가볍고 바삭한 로마 전통 핀사 전문점. 72시간 발효 반죽이 일품</div>
+      <a href="https://maps.app.goo.gl/7yb9XxAKguGiKp446" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Mimì e Cocò</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.5</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍝 파스타 / 이탈리안 · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">가지 그라탕, 포카치아, 파스타가 유명한 로컬 맛집</div>
+      <a href="https://maps.app.goo.gl/YjAkw9TFfayUfw2G7" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Pigneto Quarantuno</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.5</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍝 로만 파스타 (까치오 에 페페, 카르보나라) · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">벨벳처럼 부드러운 페코리노 소스의 까치오 에 페페와 정통 카르보나라가 일품</div>
+      <a href="https://www.google.com/maps/search/Pigneto+Quarantuno+Rome/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Il Capriccio di Carla</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.6</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍦 젤라토 · €</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">엄선 재료 수제 젤라토 전문점. 피스타치오, 아몬드, 헤이즐넛 맛 추천</div>
+      <a href="https://www.google.com/maps/search/Il+Capriccio+di+Carla+gelato+Rome/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Necci dal 1924</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.3</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍸 아페리티보 바 / 트라토리아 · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">1924년 오픈한 피뇨레토 상징 카페바. 정원에서 스프리츠와 가지 튀김볼 아페리티보 추천</div>
+      <a href="https://www.google.com/maps/search/Necci+dal+1924+Rome/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+  </div></div>
+</div>
+
+<div class="tip-card">
+  <div class="tip-header" onclick="toggleTip(this)">
+    <div class="tip-icon" style="background:var(--italy-light)">🥩</div>
+    <span>피렌체 맛집 추천</span>
+    <svg class="tip-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="tip-body"><div class="tip-body-inner">
+    <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:12px">📍 피렌체 중심가 기준 추천</p>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>All'Antico Vinaio</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.6</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🥪 파니니 · €</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">피렌체에서 가장 유명한 파니니! 스키아치아타 빵에 트러플 크림, 프로슈토 등 넉넉한 속재료. 줄이 길지만 회전 빠름</div>
+      <a href="https://www.google.com/maps/search/All+Antico+Vinaio+Florence/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Gelateria dei Neri</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.5</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍦 젤라토 · €</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">피렌체 최고 젤라토. 진한 피스타치오와 솔티드 카라멜이 시그니처. 넉넉한 양에 합리적 가격</div>
+      <a href="https://www.google.com/maps/search/Gelateria+dei+Neri+Florence/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Trattoria dall'Oste</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.4</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🥩 비스테카 알라 피오렌티나 · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">드라이에이징 숙성 비스테카 전문. 한국어 메뉴판 있음! 합리적 가격에 정교한 굽기 조절</div>
+      <a href="https://www.google.com/maps/search/Trattoria+dall+Oste+Florence/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Trattoria Mario</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.4</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍝 토스카나 가정식 · €</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">1953년부터 운영된 전통 트라토리아. 합석 문화가 특징, 정통 토스카나 가정식 가성비 최고</div>
+      <a href="https://www.google.com/maps/search/Trattoria+Mario+Florence/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Da Nerbone</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.4</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🥪 람프레도토 파니니 · €</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">산 로렌초 시장 1층의 전설적 노점. 피렌체 전통 길거리 음식 람프레도토(소 내장) 샌드위치</div>
+      <a href="https://www.google.com/maps/search/Da+Nerbone+Mercato+San+Lorenzo+Florence/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+  </div></div>
+</div>
+
+<div class="tip-card">
+  <div class="tip-header" onclick="toggleTip(this)">
+    <div class="tip-icon" style="background:var(--swiss-light)">🧀</div>
+    <span>스위스 맛집 추천 (루가노 & 루체른)</span>
+    <svg class="tip-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="tip-body"><div class="tip-body-inner">
+    <h4 style="margin-bottom:8px">📍 루가노</h4>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Grotto della Salute</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.4</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🏔️ 그로토 (티치노 전통) · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">조용한 정원의 전통 그로토. 수제 파스타와 로스트 미트, 티치노 와인의 조화</div>
+      <a href="https://www.google.com/maps/search/Grotto+della+Salute+Lugano/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Arte al Lago</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.5</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍽️ 레이크사이드 파인다이닝 · €€€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">호수가 보이는 테라스에서 즐기는 정교한 요리. 신혼여행 특별 디너로 추천!</div>
+      <a href="https://www.google.com/maps/search/Arte+al+Lago+Lugano/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <h4 style="margin:16px 0 8px">📍 루체른</h4>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Wirtshaus Galliker</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.5</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🧀 스위스 전통 (뢰스티, 퐁듀) · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">1856년 오픈! 정통 스위스 가정식. 현지인과 여행객 모두에게 사랑받는 루체른 대표 맛집</div>
+      <a href="https://www.google.com/maps/search/Wirtshaus+Galliker+Lucerne/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Restaurant Fritschi</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.4</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🧀 스위스 퐁듀 · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">한국인 여행객에게 유명한 퐁듀 맛집! 치즈 향이 강하지 않아 한국인 입맛에 잘 맞음</div>
+      <a href="https://www.google.com/maps/search/Restaurant+Fritschi+Lucerne/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Zunfthausrestaurant Pfistern</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.3</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🧀 퐁듀 전문 / 강변 뷰 · €€~€€€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">로이스 강변 역사 건물. 100가지 이상 퐁듀 메뉴! 알프스 치즈 퐁듀를 강변 뷰와 함께</div>
+      <a href="https://www.google.com/maps/search/Zunfthausrestaurant+Pfistern+Lucerne/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+  </div></div>
+</div>
+
+<div class="tip-card">
+  <div class="tip-header" onclick="toggleTip(this)">
+    <div class="tip-icon" style="background:var(--portugal-light)">🇵🇹</div>
+    <span>포르투갈 맛집 추천 (리스본 & 포르토)</span>
+    <svg class="tip-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="tip-body"><div class="tip-body-inner">
+    <h4 style="margin-bottom:8px">📍 리스본</h4>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Pasteis de Belem</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.5</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🥧 에그타르트 원조 · €</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">1837년부터 수도원 비밀 레시피로 매일 2만 개 이상 굽는 에그타르트 원조! 시나몬 뿌려서 따뜻할 때</div>
+      <a href="https://www.google.com/maps/search/Pasteis+de+Belem+Lisbon/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Taberna da Rua das Flores</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.5</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍷 페티스코스 (포르투갈 타파스) · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">리스본 최고의 페티스코스 바. 제철 소량 요리를 나눠 먹는 스타일. 예약 불가, 일찍 갈 것!</div>
+      <a href="https://www.google.com/maps/search/Taberna+da+Rua+das+Flores+Lisbon/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Cervejaria Ramiro</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.4</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🦐 해산물 · €€€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">1956년부터의 리스본 최고 해산물. 갈릭 새우, 타이거 프라운 필수. 마지막에 프레고(스테이크 샌드위치)로 마무리가 전통!</div>
+      <a href="https://www.google.com/maps/search/Cervejaria+Ramiro+Lisbon/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>A Casa do Bacalhau</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.3</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🐟 바칼랴우 (대구 요리) · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">대구 요리만 20가지 이상! 바칼랴우 아 브라스(대구+감자+달걀 볶음)는 한국인 입맛에 딱</div>
+      <a href="https://www.google.com/maps/search/A+Casa+do+Bacalhau+Lisbon/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Time Out Market (Manteigaria)</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.4</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🏪 푸드마켓 / 에그타르트 · €~€€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">만테이가리아 에그타르트는 벨렝과 쌍벽! 미쉐린 셰프 부스 다수. 다양한 음식을 한곳에서</div>
+      <a href="https://www.google.com/maps/search/Time+Out+Market+Lisbon/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <h4 style="margin:16px 0 8px">📍 포르토</h4>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Graham's Port Lodge (Vinum)</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.5</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍷 포트와인 셀러 + 파인다이닝 · €€€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">1820년 설립. 도우루 강 전경의 포트와인 테이스팅 + 페어링 코스 디너. 신혼여행 특별 저녁으로 강추!</div>
+      <a href="https://www.google.com/maps/search/Grahams+Port+Lodge+Porto/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Brasao Aliados</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.4</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🥪 프란세지냐 · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">한국인에게 가장 유명한 프란세지냐 맛집! 맥주 토마토 특제 소스가 일품. 양이 많으니 둘이 하나도 OK</div>
+      <a href="https://www.google.com/maps/search/Brasao+Aliados+Porto/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Adega Sao Nicolau</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.3</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🐙 해산물 / 포르투갈 전통 · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">히베이라 강변의 클래식 해산물 식당. 폴보 아 라가레이루(문어 올리브유 구이)가 일품</div>
+      <a href="https://www.google.com/maps/search/Adega+Sao+Nicolau+Porto/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Cafe Santiago</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.3</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🥪 프란세지냐 (현지인 맛집) · €</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">1959년부터 운영, 현지인이 사랑하는 프란세지냐 명소. 클래식 레시피에 충실하며 가성비 최고</div>
+      <a href="https://www.google.com/maps/search/Cafe+Santiago+Porto/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+  </div></div>
+</div>
+
+<div class="tip-card">
+  <div class="tip-header" onclick="toggleTip(this)">
+    <div class="tip-icon" style="background:var(--spain-light)">🇪🇸</div>
+    <span>바르셀로나 맛집 추천</span>
+    <svg class="tip-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="tip-body"><div class="tip-body-inner">
+    <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:12px">📍 바르셀로나 중심가 기준 추천</p>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Xiringuito Escriba</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.4</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🥘 빠에야 / 해산물 · €€~€€€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">해변가에서 석양과 함께 즐기는 빠에야! 해산물 빠에야와 피데우아(면 빠에야)가 유명</div>
+      <a href="https://www.google.com/maps/search/Xiringuito+Escriba+Barcelona/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>VINITUS</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.3</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍽️ 타파스 / 해산물 · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">한국 TV 출연 후 한국인 여행객에게 인기 폭발! '꿀대구(Bacalao con miel)' €9.95가 시그니처</div>
+      <a href="https://www.google.com/maps/search/Vinitus+Barcelona/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Cerveceria Catalana</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.3</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍢 타파스 · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">바르셀로나 대표 타파스! 50가지 이상 메뉴. 감바스, 이베리코 핀초스 필수. 카사 밀라 근처</div>
+      <a href="https://www.google.com/maps/search/Cerveceria+Catalana+Barcelona/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Granja La Pallaresa</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.4</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍫 추로스 + 핫초코 · €</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">1947년 오픈. 고딕 지구의 전설적 추로스 가게. 진하고 걸쭉한 핫초코에 바삭한 추로스를 찍어 먹기</div>
+      <a href="https://www.google.com/maps/search/Granja+La+Pallaresa+Barcelona/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+
+    <div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Irati Taverna Basca</strong>
+        <span style="background:#FFF8E1;color:#F57F17;padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600">⭐ 4.2</span>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin:4px 0">🍢 핀초스 (바스크) · €€</div>
+      <div style="font-size:0.85rem;margin-bottom:8px">고딕 지구의 바스크 핀초스 바. 바 위에 놓인 핀초스를 골라 먹는 재미! 정통 바스크 스타일</div>
+      <a href="https://www.google.com/maps/search/Irati+Taverna+Basca+Barcelona/" target="_blank" class="map-link accom-link">📍 구글맵 열기</a>
+    </div>
+  </div></div>
+</div>
+</div>
+
 <!-- Checklist Section -->
 <div class="section-title" id="checklist">✅ 준비물 체크리스트</div>
 
@@ -2249,6 +2596,10 @@ body {
     <span class="nav-icon">💡</span>
     <span>팁</span>
   </a>
+  <a class="nav-item" href="#food" onclick="smoothNav(event,'food')">
+    <span class="nav-icon">🍽️</span>
+    <span>맛집</span>
+  </a>
   <a class="nav-item" href="#checklist" onclick="smoothNav(event,'checklist')">
     <span class="nav-icon">✅</span>
     <span>준비물</span>
@@ -2348,7 +2699,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.3 });
 
-['top', 'itinerary', 'stories', 'tips', 'checklist'].forEach(id => {
+['top', 'itinerary', 'stories', 'tips', 'food', 'checklist'].forEach(id => {
   const el = document.getElementById(id);
   if (el) observer.observe(el);
 });
