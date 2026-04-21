@@ -178,6 +178,21 @@ body {
 .day-info { flex: 1; min-width: 0; }
 .day-date { font-size: 0.78rem; color: var(--text-secondary); font-weight: 400; }
 .day-location { font-size: 0.95rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.day-intensity {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 10px;
+  margin-top: 3px;
+  line-height: 1.3;
+}
+.intensity-travel { background: #ECEFF1; color: #455A64; }
+.intensity-sight { background: #FFF8E1; color: #F57F17; }
+.intensity-active { background: #FFEBEE; color: #C62828; }
+.intensity-rest { background: #E1F5FE; color: #0277BD; }
 
 .day-chevron {
   width: 20px;
@@ -602,6 +617,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 10일 (목)</div>
       <div class="day-location">✈️ 인천 → 🇮🇹 로마</div>
+      <div class="day-intensity intensity-travel">✈️ 장거리 이동 · 🔋🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -653,6 +669,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 11일 (금)</div>
       <div class="day-location">🇮🇹 로마 - 바티칸 투어</div>
+      <div class="day-intensity intensity-sight">🚶 관광 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -706,6 +723,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 12일 (토)</div>
       <div class="day-location">🇮🇹 로마 → 피렌체</div>
+      <div class="day-intensity intensity-sight">🚶 이동+관광 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -755,6 +773,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 13일 (일)</div>
       <div class="day-location">🇮🇹 피렌체 → 🚢 제노아 크루즈 승선</div>
+      <div class="day-intensity intensity-travel">✈️ 이동+승선 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -796,6 +815,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 14일 (월)</div>
       <div class="day-location">🚢 크루즈 - 🇮🇹 나폴리 기항</div>
+      <div class="day-intensity intensity-sight">🚶 기항지 투어 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -874,6 +894,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 15일 (화)</div>
       <div class="day-location">🚢 크루즈 - 🇮🇹 메시나 기항</div>
+      <div class="day-intensity intensity-sight">🚶 기항지 투어 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -956,6 +977,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 16일 (수)</div>
       <div class="day-location">🚢 크루즈 - 🇲🇹 몰타 기항</div>
+      <div class="day-intensity intensity-active">🔥 기항지+오르막 · 🔋🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1053,17 +1075,80 @@ body {
     <div class="day-number bg-cruise"><span class="dn">DAY</span><span class="num">8</span></div>
     <div class="day-info">
       <div class="day-date">9월 17일 (목)</div>
-      <div class="day-location">🚢 크루즈 - 종일 항해</div>
+      <div class="day-location">🚢 크루즈 - 종일 항해 (티레니아해)</div>
+      <div class="day-intensity intensity-rest">🌴 휴식 + 갈라 · 🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
   <div class="day-body"><div class="day-body-inner">
+    <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:10px">💡 종일 항해일은 크루즈의 진짜 매력! 하선 안 하는 날이니 <strong>Daily Program</strong>(전날 저녁 객실 배달)을 꼭 확인해서 계획 짜기</p>
+
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-dot dot-cruise"></div>
-        <div class="event"><span class="event-icon">😴</span> 종일 항해일 - 선내 자유시간</div>
-        <div class="detail">수영장, 자쿠지, 스파에서 여유롭게 😎 | 저녁에는 극장 쇼 공연 관람 | 갑판에서 지중해 일몰 감상 (샴페인 한 잔과 함께!) | 갈라 나이트가 있을 수 있으니 정장 준비</div>
-        <span class="tag tag-cruise">휴식일</span>
+        <div class="time">08:00~09:30</div>
+        <div class="event"><span class="event-icon">🍳</span> 여유로운 조식</div>
+        <div class="detail">항해일엔 뷔페가 덜 붐빔. 발코니 객실이면 <strong>룸서비스 조식</strong>(무료) 신청해서 바다 보며 여유롭게!</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">10:00~11:00</div>
+        <div class="event"><span class="event-icon">💆</span> 스파 / 피트니스</div>
+        <div class="detail">MSC Aurea Spa 터키탕+사우나 (€40~60/인, 항해일 할인 많음) | 커플 마사지 예약 추천 (€150~200/60분) | 피트니스센터 무료, 바다 보며 러닝머신</div>
+        <span class="tag tag-cruise">선택</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">11:00~12:30</div>
+        <div class="event"><span class="event-icon">🎓</span> 선상 액티비티</div>
+        <div class="detail">요리 클래스 (€30~), 와인 테이스팅 (€20~), 믹솔로지 클래스 | 트리비아 퀴즈 (무료, 매일 다른 주제) | 빙고 (€10 참가비, 상금 크루즈 크레딧)</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">12:30~14:00</div>
+        <div class="event"><span class="event-icon">🍕</span> 점심 (풀 데크 추천)</div>
+        <div class="detail">실내 뷔페보다 <strong>풀 데크 피자리아</strong>에서 햇볕 받으며 먹는 게 크루즈의 맛! 화덕 피자+젤라토 무료</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">14:00~17:00</div>
+        <div class="event"><span class="event-icon">🏊</span> 수영장 / 선베드 타임</div>
+        <div class="detail"><strong>항해일 수영장은 붐빔!</strong> 상갑판의 성인 전용 Top 18/19 Zone이 조용함. 선베드엔 수건 놓고 자리 맡기 OK | 자쿠지는 일몰 시간 대기 가능</div>
+        <span class="tag tag-cruise">핵심 경험</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">17:00~18:30</div>
+        <div class="event"><span class="event-icon">🌅</span> 일몰 + 아페리티보</div>
+        <div class="detail">서쪽 갑판에서 지중해 일몰 감상! | Sky Lounge나 Garden Bar에서 아페롤 스프리츠 (€10~12) | 최고의 포토타임</div>
+        <span class="tag tag-cruise">로맨틱</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">18:30~19:00</div>
+        <div class="event"><span class="event-icon">👗</span> 갈라 나이트 준비</div>
+        <div class="detail"><strong>Day 8은 갈라 나이트 유력!</strong> 7박 중 2회 중 1회가 항해일에 배정되는 게 관례. Daily Program에서 공식 확인. 정장/드레스 착용해서 추억 남기기</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">19:00~21:00</div>
+        <div class="event"><span class="event-icon">🥂</span> 캡틴스 갈라 디너</div>
+        <div class="detail">메인 다이닝룸 (MDR)에서 갈라 코스 요리! 로브스터, 필레 미뇽 등 프리미엄 메뉴. 캡틴 환영 샴페인 제공 | 갈라 데이는 전통적으로 <strong>샤토브리앙</strong> 또는 <strong>베이크드 알래스카</strong> 디저트 행진이 명물</div>
+        <span class="tag tag-cruise">시그니처</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">21:00~22:30</div>
+        <div class="event"><span class="event-icon">🎭</span> 극장 쇼 (Broadway Night)</div>
+        <div class="detail">MSC World Europa 메인 극장 2,000석. 브로드웨이 스타일 뮤지컬/아크로바틱/오페라 등 매일 다른 쇼 | <strong>예약 앱(MSC for Me)에서 사전 좌석 지정</strong> 권장. 인기작은 마감 빠름</div>
+        <span class="tag tag-cruise">핵심 경험</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-cruise"></div>
+        <div class="time">22:30~24:00</div>
+        <div class="event"><span class="event-icon">🎰</span> 카지노 / 디스코 / 로맨틱 산책</div>
+        <div class="detail">카지노(슬롯/포커/룰렛) | Galaxy 디스코 새벽까지 운영 | <strong>추천:</strong> 프롬나드 덱에서 별밤 산책 - 항해 중이라 육지 불빛 없는 칠흑 같은 하늘에 별이 쏟아짐 ⭐️</div>
+        <span class="tag tag-cruise">로맨틱</span>
       </div>
     </div>
   </div></div>
@@ -1076,6 +1161,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 18일 (금)</div>
       <div class="day-location">🚢 크루즈 - 🇪🇸 바르셀로나 (선내)</div>
+      <div class="day-intensity intensity-rest">🌴 선내 휴식 · 🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1098,6 +1184,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 19일 (토)</div>
       <div class="day-location">🚢 크루즈 - 🇫🇷 마르세유 기항</div>
+      <div class="day-intensity intensity-sight">🚶 기항지 투어 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1194,6 +1281,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 20일 (일)</div>
       <div class="day-location">🚢 제노아 하선 → 🇨🇭 루가노</div>
+      <div class="day-intensity intensity-travel">✈️ 하선+장거리 이동 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1246,6 +1334,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 21일 (월)</div>
       <div class="day-location">🇨🇭 루가노 → 루체른</div>
+      <div class="day-intensity intensity-sight">🚶 이동+관광 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1295,6 +1384,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 22일 (화)</div>
       <div class="day-location">🇨🇭 리기산 → ✈️ 🇵🇹 리스본</div>
+      <div class="day-intensity intensity-active">🔥 산악+비행 · 🔋🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1365,6 +1455,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 23일 (수)</div>
       <div class="day-location">🇵🇹 리스본 관광</div>
+      <div class="day-intensity intensity-sight">🚶 관광 (언덕 많음!) · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1411,6 +1502,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 24일 (목)</div>
       <div class="day-location">🇵🇹 리스본 → 포르토</div>
+      <div class="day-intensity intensity-sight">🚶 이동+관광 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1462,6 +1554,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 25일 (금)</div>
       <div class="day-location">🇵🇹 포르토 관광</div>
+      <div class="day-intensity intensity-sight">🚶 관광+와인 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1501,6 +1594,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 26일 (토)</div>
       <div class="day-location">🇵🇹 포르토 → 🇪🇸 바르셀로나</div>
+      <div class="day-intensity intensity-travel">✈️ 비행 이동 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1551,6 +1645,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 27일 (일)</div>
       <div class="day-location">🇪🇸 바르셀로나 관광</div>
+      <div class="day-intensity intensity-sight">🚶 가우디 투어 · 🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1598,6 +1693,7 @@ body {
     <div class="day-info">
       <div class="day-date">9월 28일 (월)</div>
       <div class="day-location">🇪🇸 바르셀로나 → 🇰🇷 인천</div>
+      <div class="day-intensity intensity-travel">✈️ 장거리 귀국 · 🔋🔋🔋</div>
     </div>
     <svg class="day-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
@@ -1905,8 +2001,64 @@ body {
 <!-- Travel Tips Section -->
 <div class="section-title" id="tips">💡 여행 팁</div>
 
-<!-- Italy Tips -->
+<!-- City Pass Comparison -->
 <div class="tips-section">
+<div class="tip-card" style="animation-delay:0.95s">
+  <div class="tip-header" onclick="toggleTip(this)">
+    <div class="tip-icon" style="background:#FFF3E0">🎫</div>
+    <span>도시 패스 비교 (살까 말까?)</span>
+    <svg class="tip-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="tip-body"><div class="tip-body-inner">
+    <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:12px">💡 도시 패스는 "얼마나 많이 볼거냐"에 따라 이득 여부가 갈림. 우리 일정 기준 판단 포함!</p>
+
+    <h4>🇮🇹 Roma Pass <span style="color:#2E7D32;font-size:0.75rem">추천 ✗</span></h4>
+    <ul>
+      <li>48시간 €36 / 72시간 €58. 첫 1~2개 명소 무료 + 이후 할인 + 대중교통 무제한</li>
+      <li><strong>우리 일정:</strong> 바티칸은 포함 안 됨(바티칸 시국은 별도 국가!). 콜로세움 예약권이 필수라 Roma Pass로 시간 절약 효과도 제한적</li>
+      <li><strong>결론:</strong> 2박 짧은 일정 + 바티칸 투어 예약 + 콜로세움 개별 예매 방식이면 <strong>굳이 불필요</strong></li>
+    </ul>
+
+    <h4>🇮🇹 Firenze Card <span style="color:#E53935;font-size:0.75rem">비추천 ✗</span></h4>
+    <ul>
+      <li>72시간 €85. 60여 개 박물관 입장 + 줄 서기 면제</li>
+      <li><strong>우리 일정:</strong> 피렌체 1박(실질 반나절)이라 3~4개 명소도 못 봄. 원금 회수 어려움</li>
+      <li><strong>대안:</strong> 두오모 돔/우피치 미술관 <strong>개별 사전 예약</strong>(각 €20~30)이 효율적</li>
+    </ul>
+
+    <h4>🇨🇭 Swiss Travel Pass <span style="color:#C62828;font-size:0.75rem">상황별 ⚖️</span></h4>
+    <ul>
+      <li>3일권 약 CHF 244. 기차/버스/유람선 무제한 + 리기산 <strong>무료</strong> + 박물관 500곳 무료</li>
+      <li><strong>우리 일정:</strong> 루가노→루체른 기차(약 CHF 70) + 리기산 왕복(약 CHF 120) + 취리히 공항 이동만으로 본전 ✓</li>
+      <li><strong>대안:</strong> 개별 구매 시 <strong>하프페어 카드(CHF 120, 1개월 50% 할인)</strong>가 더 쌀 수도. 엑셀로 실제 이동 계산해보고 결정 권장</li>
+      <li>구매: sbb.ch 또는 myswissalps.com</li>
+    </ul>
+
+    <h4>🇵🇹 Lisboa Card <span style="color:#2E7D32;font-size:0.75rem">추천 ✓</span></h4>
+    <ul>
+      <li>24시간 €27 / 48시간 €44 / 72시간 €54. 대중교통 무제한 + 제로니무스 수도원/벨렝탑 무료 + 28번 트램/엘레바도르 산타 주스타 포함</li>
+      <li><strong>우리 일정:</strong> Day 14 벨렝 지구 하루 집중 코스면 24시간권으로 본전 이상 (제로니무스 €12 + 벨렝탑 €8 + 교통)</li>
+      <li>구매: 공항 관광안내소, 호시우 광장 사무소, 또는 visitlisboa.com</li>
+    </ul>
+
+    <h4>🇪🇸 Barcelona Card <span style="color:#E53935;font-size:0.75rem">비추천 ✗</span></h4>
+    <ul>
+      <li>3일권 €55~. 대중교통 무제한 + 박물관 20+ 무료/할인. <strong>단 사그라다 파밀리아, 구엘 공원 미포함!</strong></li>
+      <li><strong>우리 일정:</strong> 핵심(사그라다/구엘)이 빠져서 매력 떨어짐. T-Casual 교통카드(€11.35) + 개별 티켓이 훨씬 경제적</li>
+      <li><strong>대안:</strong> Hola Barcelona Travel Card(교통 전용, 72시간 €18.40)가 합리적</li>
+    </ul>
+
+    <div class="info-box" style="border-color:#F57C00;margin-top:12px">
+      <strong>🎯 우리 일정 최종 추천:</strong><br>
+      ✓ <strong>Swiss Travel Pass 3일권</strong> — 리기산+이동 한 번에 해결<br>
+      ✓ <strong>Lisboa Card 24~48시간</strong> — 벨렝 지구 집중 공략<br>
+      ✓ <strong>Barcelona: Hola Travel Card + 개별 예매</strong><br>
+      ✗ 로마/피렌체 패스는 건너뛰고 개별 사전 예매
+    </div>
+  </div></div>
+</div>
+
+<!-- Italy Tips -->
 <div class="tip-card" style="animation-delay:1s">
   <div class="tip-header" onclick="toggleTip(this)">
     <div class="tip-icon" style="background:var(--italy-light)">🇮🇹</div>
@@ -1946,6 +2098,17 @@ body {
       - 어깨를 가리는 상의 필수 (민소매 X)<br>
       - 규정 미준수 시 입장 불가<br>
       - 얇은 스카프 하나 가져가면 유용!
+    </div>
+
+    <h4>🏛️ 콜로세움 티켓 예매 (필수!)</h4>
+    <div class="info-box" style="border-color:var(--italy)">
+      <strong>현장 구매 사실상 불가능 — 사전 예매 필수!</strong><br>
+      - 공식 사이트: <strong>coopculture.it</strong> (유일한 공식 판매처)<br>
+      - <strong>약 30일 전 오픈</strong> — 시간대 지정 예매, 매진 빠름<br>
+      - 기본 티켓 €18 (콜로세움 + 포로 로마노 + 팔라티노 24시간 유효)<br>
+      - 아레나 입장 €24, 지하 투어 €24 — 지하/아레나는 개별 서킷이라 <strong>매진이 더 빠름</strong><br>
+      - 공식 사이트 외 리셀러는 <strong>2~3배 바가지</strong>, 주의!<br>
+      - Klook/Get Your Guide 가이드 투어(€50~80)는 우선 입장 포함이라 편함
     </div>
 
     <h4>🍕 핀사(Pinsa) vs 피자</h4>
@@ -2080,6 +2243,16 @@ body {
     <ul>
       <li>모든 결제는 크루즈 카드로. 하선 전날 자동 정산 (등록한 신용카드)</li>
     </ul>
+
+    <h4>💰 자동 팁 (Daily Service Charge)</h4>
+    <div class="info-box" style="border-color:var(--cruise)">
+      <strong>MSC는 매일 자동으로 팁이 청구됩니다!</strong><br>
+      - 성인 1인당 <strong>€10~12/일</strong> (지중해 노선 기준, 객실 등급에 따라 다름)<br>
+      - 7박 × 2인 기준 <strong>€140~170</strong> 추가 발생<br>
+      - 레스토랑 서비스, 객실 청소 등 크루에게 분배됨<br>
+      - 리셉션에서 <strong>면제/조정 가능</strong>하지만, 스태프 생계와 연결되어 있어 유지 권장<br>
+      - 바/스페셜티 레스토랑 계산서엔 별도로 <strong>서비스료 15% 자동 추가</strong>됨 (이중 팁 X)
+    </div>
 
     <h4>🏊 수영장/자쿠지</h4>
     <ul>
@@ -2329,6 +2502,17 @@ body {
       <li>AP 기차 약 2시간 30분. cp.pt에서 예매</li>
       <li>조기 예매 시 &euro;15~25</li>
     </ul>
+
+    <h4>🕐 영업시간 / 일요일 휴무 주의</h4>
+    <div class="info-box" style="border-color:var(--portugal)">
+      <strong>일요일엔 많은 상점이 문을 닫습니다!</strong><br>
+      - 일반 상점: 평일 10:00~19:00, 토요일 ~13:00, <strong>일요일 휴무</strong> 많음<br>
+      - 레스토랑 점심: 12:30~15:00, 저녁: 19:30~22:30 (스페인보다는 빠름)<br>
+      - 카페/파스텔라리아는 일요일도 영업 (에그타르트는 언제든!)<br>
+      - 대형 쇼핑몰(Colombo, NorteShopping)은 일요일도 10:00~23:00 정상 영업<br>
+      - 관광지 박물관은 대부분 <strong>월요일 휴무</strong>! 계획 시 주의<br>
+      - <strong>우리 일정 영향:</strong> Day 14(수) 리스본 관광 OK / Day 16(금) 포르토 OK — 다행히 월/일 겹침 적음
+    </div>
   </div></div>
 </div>
 
@@ -2412,6 +2596,17 @@ body {
       - 카페/레스토랑에서 핸드폰을 테이블에 놓지 말 것<br>
       - 누가 말을 걸며 접근하면 소지품 확인<br>
       - 여권은 숙소 금고에 보관, 사본만 지참
+    </div>
+
+    <h4>🕐 영업시간 / 요일 주의</h4>
+    <div class="info-box" style="border-color:var(--spain)">
+      <strong>우리 일정에 중요! Day 18(일)+Day 19(월) 유의</strong><br>
+      - 일반 상점 대부분 <strong>일요일 휴무</strong>. 라 람블라스 주변 관광 상점은 영업<br>
+      - 슈퍼마켓(Mercadona 등)도 <strong>일요일 휴무</strong>인 곳 많음. Carrefour Express만 주로 영업<br>
+      - 박물관 대다수 <strong>월요일 휴무</strong> (피카소 미술관 등). <span class="highlight">Day 19(월) 방문 전 확인!</span><br>
+      - 사그라다 파밀리아, 구엘 공원은 <strong>연중무휴</strong> → 월요일에 안전<br>
+      - 시에스타(14:00~17:00)는 관광지구엔 거의 없지만, 로컬 동네 상점은 닫힘<br>
+      - 레스토랑 저녁은 <strong>21:00 이후</strong>가 본격 시간 (19:00에 가면 한산)
     </div>
   </div></div>
 </div>
